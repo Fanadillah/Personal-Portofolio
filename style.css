@@ -394,6 +394,74 @@ footer .column > a:hover{
     text-align: center;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    background-color: #181818;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    position: relative;
+    color: #fff;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #fff;
+}
+
+.carousel {
+    width: 100%;
+    text-align: center;
+}
+
+.carousel img {
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-controls button {
+    background-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 5px 20px;
+}
+
+.carousel-controls button:hover {
+    color: #1d4ed8;
+}
+
+
 @media (width < 900px){
     .nav-links{
         display: none;

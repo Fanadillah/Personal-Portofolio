@@ -39,3 +39,33 @@ link2.addEventListener('click', () => {
 link3.addEventListener('click', () => {
     scrollToElement('.column');
 });
+
+const projectImages = [
+    ["image/project1-1.png", "image/project1-2.png", "image/project1-3.png", "image/project1-4.png"],
+    ["image/project2-1.png", "image/project2-2.png", "image/project2-3.png", "image/project2-4.png","image/project2-5.png", "image/project2-6.png", "image/project2-7.png", "image/project2-8.png"],
+    ["image/project3-1.png", "image/project3-2.png", "image/project3-3.png", "image/project3-4.png","image/project3-5.png", "image/project3-6.png", "image/project3-7.png"]
+];
+
+let currentProject = 0;
+let currentSlide = 0;
+
+function openModal(projectIndex) {
+    currentProject = projectIndex;
+    currentSlide = 0;
+    document.getElementById("carousel-img").src = projectImages[projectIndex][0];
+    document.getElementById("project-modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("project-modal").style.display = "none";
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % projectImages[currentProject].length;
+    document.getElementById("carousel-img").src = projectImages[currentProject][currentSlide];
+}
+
+function prevSlide() {
+    currentSlide = (currentSlide - 1 + projectImages[currentProject].length) % projectImages[currentProject].length;
+    document.getElementById("carousel-img").src = projectImages[currentProject][currentSlide];
+}
